@@ -1,0 +1,25 @@
+{
+  "required": false,
+  "minVersion": "0.8.5",
+  "package": "com.pzmoodle.immersion.mixin",
+  "compatibilityLevel": "JAVA_21",
+  "mixins": [
+    "TaczReloadMixin",
+    "TaczBulletDamageMixin",
+    "DaySleepNoSkipMixin",
+    "PassiveWakeGuardMixin",
+    "BedOccupancyCheckMixin",
+    "FishingSpeedMixin",
+    "ItemDurabilityMixin",
+    "FoodExhaustionMixin"
+  ],
+  "client": [
+    "ThirstBarRendererMixin",
+    "ExperienceBarMixin",
+    "SprintFoodGateMixin",
+    "SpeedFovMixin"
+  ],
+  "injectors": {
+    "defaultRequire": 0
+  }
+}

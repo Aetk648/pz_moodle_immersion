@@ -1,0 +1,46 @@
+modLoader="javafml"
+loaderVersion="${loader_version_range}"
+license="${mod_license}"
+issueTrackerURL="https://example.invalid/pz_moodle_immersion"
+
+[[mixins]]
+config = "pz_moodle_immersion.mixins.json"
+
+[[mods]]
+modId="${mod_id}"
+version="${mod_version}"
+displayName="${mod_name}"
+authors="AutoMods"
+description='''把《僵尸毁灭工程》的 Moodle 状态系统移植到 Minecraft：
+右上角僵毁风格图标传达身体与精神状态，不显示具体数值，沉浸优先。
+可选联动：Thirst Was Reclaimed / 森罗物语：酒馆 / 冷汗。'''
+
+[[dependencies.${mod_id}]]
+modId="neoforge"
+type="required"
+versionRange="[${neo_version},)"
+ordering="NONE"
+side="BOTH"
+
+[[dependencies.${mod_id}]]
+modId="minecraft"
+type="required"
+versionRange="${minecraft_version_range}"
+ordering="NONE"
+side="BOTH"
+
+# 可选依赖：仅在安装时影响加载顺序（用于屏蔽冷汗 HUD），不强制安装
+[[dependencies.${mod_id}]]
+modId="cold_sweat"
+type="optional"
+versionRange="[0,)"
+ordering="AFTER"
+side="CLIENT"
+
+# 可选联动：TACZ 枪械。未安装时不会阻止模组启动。
+[[dependencies.${mod_id}]]
+modId="tacz"
+type="optional"
+versionRange="[0,)"
+ordering="AFTER"
+side="BOTH"

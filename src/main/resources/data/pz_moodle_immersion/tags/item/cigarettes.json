@@ -1,0 +1,7 @@
+{
+  "replace": false,
+  "values": [
+    {"id": "mod_f40c63ac:cigarette", "required": false},
+    {"id": "mod_f40c63ac:cigar", "required": false}
+  ]
+}
